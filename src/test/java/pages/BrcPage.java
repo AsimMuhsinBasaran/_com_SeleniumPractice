@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import utilities.Driver;
 
+import java.util.List;
+
 public class BrcPage {
     public BrcPage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -63,4 +65,9 @@ public class BrcPage {
     @FindBy(xpath ="//tbody//tr[5]//td[2]")
     public WebElement vitesKutusu;
 
+    @FindBy(xpath ="//ul[@class=\"vehicleList d-none d-lg-block\"]//li[@class]")
+    public List<WebElement> gorunen6AracList;
+
+    @FindBy(xpath="//h3[1]")
+    public WebElement saatlikFiyat;
 }
